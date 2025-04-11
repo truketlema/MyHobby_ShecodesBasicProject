@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+        background: linear-gradient(
+          44.8deg,
+          rgba(255, 136, 102, 0.67) -53.1%,
+          rgba(255, 221, 136, 0.28) 49%
+        );
+      }
+      body.dark {
+        background: linear-gradient(200deg, #3f372e, #9e6b4f, #85725e, #cfa57b);
+
+        color: white;
+      }
+      body.dark .white {
+        background: rgba(64, 50, 34, 0.7);
+      }
+
+      .white {
+        background-color: white;
+        width: 600px;
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        border-radius: 10px;
+        margin-bottom: 35px;
+      }
+      .wii {
+        text-align: center;
+        padding: 20px 15px 12px;
+      }
+      .gri {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        height: auto;
+        margin: 15px auto;
+        align-items: stretch;
+      }
+      .gri > img {
+        width: 100%;
+        object-fit: cover;
+        max-height: 60px;
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+      }
+      .gri > img:hover {
+        transform: scale(1.7);
+      }
+      a img {
+        width: 100%;
+        object-fit: cover;
+        max-height: 300px;
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+      }
+      a img:hover {
+        transform: scale(1.07);
+        opacity: 0.8;
+      }
+      .end {
+        padding-left: 15px;
+        font-weight: bold;
+      }
+      header {
+        display: flex;
+        justify-content: center;
+      }
+      header button {
+        margin: 10px 15px 25px;
+        padding: 12px 15px;
+        color: white;
+        background-color: black;
+        border-radius: 10px;
+        border: 1px solid black;
+        font-weight: bold;
+        transition: all 300ms ease-in-out;
+      }
+      header button:hover {
+        background-color: white;
+        color: black;
+        border: none;
+      }
+      p {
+        text-align: justify;
+      }
+      .code {
+        text-align: center;
+        font-weight: bold;
+      }
+      .learn-button {
+        display: flex;
+        justify-content: center;
+      }
+
+      .end button {
+        margin: 15px;
+        padding: 12px 15px;
+        color: white;
+        background-color: #93772a;
+        border-radius: 10px;
+        border: 1px solid #93772a;
+        font-weight: bold;
+        transition: all 300ms ease-in-out;
+      }
+      .end button:hover {
+        color: #93772a;
+        background-color: white;
+      }
+    </style>
+</head>
+<body>
+    <header><button>Change theme</button></header>
+    <section class="white">
+      <div class="wii">
+        <h1>✍️Poetry</h1>
+        <h2>Language of the soul</h2>
+        <a href="https://en.wikipedia.org/wiki/Writing" target="_blank"
+          ><img
+            src="https://i.pinimg.com/736x/b1/a1/0a/b1a10afbd9d9408fe844f4b9bbb09796.jpg"
+            alt=""
+        /></a>
+        <div class="gri">
+          <img
+            src="https://www.yourtango.com/sites/default/files/2020/pablo-neruda-poems-but-if-each-hour-you-feel-that-you-are-destined-for-me.jpg"
+            alt=""
+          /><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMChgr32XAXnIEJlCdhItABerShCmzQIODow&s"
+            alt=""
+          /><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh0h9nDGXn9t3QZ0TURSWRJ-PwD5Vg5xGyRiN6il0ZPlTiJQCgurqpWfvuCXvAatosGX0&usqp=CAU"
+            alt=""
+          /><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsuNWf91IIn9qqjaUFMyYxrkjHWrVAZcJAUA&s"
+            alt=""
+          />
+        </div>
+        <p>
+          Poetry (from the Greek word poiesis, "making") is a form of literary
+          art that uses aesthetic and often rhythmic qualities of language to
+          evoke meanings in addition to, or in place of, literal or
+          surface-level meanings. Any particular instance of poetry is called a
+          poem and is written by a poet.
+        </p>
+      </div>
+      <div class="end">
+        <a href="https://en.wikipedia.org/wiki/Poetry"
+          >📖Read it on wikipidea</a
+        >
+        <br />
+        <div class="learn-button"><button>Learn poetry</button></div>
+      </div>
+    </section>
+    <div class="code">👩‍💻Coded by Truket Lema.</div>
+    <script>
+      function changetheme() {
+        let bodyy = document.querySelector("body");
+        bodyy.classList.toggle("dark");
+      }
+      let buttonSelect = document.querySelector("header button");
+      buttonSelect.addEventListener("click", changetheme);
+    </script>
+  </body>
+</body>
+</html>
